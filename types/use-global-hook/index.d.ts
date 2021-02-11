@@ -19,7 +19,7 @@ export {};
 export interface Store<S, A> {
     state: S;
     actions: A;
-    setState(state: S, afterUpdateCallback?: () => void): void;
+    setState(partialNewState: Partial<S>, afterUpdateCallback?: () => void): void;
 }
 
 type IProduce = typeof Immer;
